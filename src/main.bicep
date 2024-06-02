@@ -1,6 +1,6 @@
-param location string = 'westus2'
-param resourceBaseName string = 'adora-bicep'
-param storageAccountName string = 'adorabicepstore'
+param location string = 'eastus'
+param resourceBaseName string = 'oreilly-bicep'
+param storageAccountName string = 'oreillybcpstr'
 
 module webApp '../modules/webApp.bicep' = {
   name: 'app-service'
