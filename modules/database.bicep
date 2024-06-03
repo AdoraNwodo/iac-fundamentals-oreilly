@@ -43,10 +43,8 @@ resource cosmosDbAccount 'Microsoft.DocumentDB/databaseAccounts@2021-04-15' = {
 
 // 2. Database
 resource cosmosDb 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-06-15' = {
-  name: '${cosmosDbAccount.name}/${databaseId}'
-  dependsOn: [
-    cosmosDbAccount
-  ]
+  name: databaseId
+  parent: cosmosDbAccount
   properties:{
     resource:{
       id: databaseId
@@ -56,11 +54,8 @@ resource cosmosDb 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2021-06-15
 
 // 3. Cosmos DB containers
 resource cosmosDbContainer 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers@2021-06-15' = [for container in containers: {
-  name:'${cosmosDb.name}/${container.id}'
-  dependsOn: [
-    cosmosDbAccount
-    cosmosDb
-  ]
+  name:container.id
+  parent: cosmosDb
   properties:{
     resource:{
       id: container.id
