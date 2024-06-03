@@ -22,4 +22,4 @@ jobs:
     - uses: azure/arm-deploy@v1
       with:
         resourceGroupName: "testrg"
-        template: ../src/main.bicep
+        template: ./src/main.bicep
