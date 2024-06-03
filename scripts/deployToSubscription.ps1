@@ -1,7 +1,7 @@
 $templateFile = '../src/multi-scoped.bicep'
 $today = Get-Date -Format 'MM-dd-yyyy'
 $deploymentName = "adora-subscription-scoped-$today"
-$resourceGroupName = "testrg2"
+$resourceGroupName = "testrg"
 
 New-AzSubscriptionDeployment `
   -Name $deploymentName `

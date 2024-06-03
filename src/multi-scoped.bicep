@@ -1,5 +1,5 @@
 param location string = 'eastus'
-param resourceBaseName string = 'a-bicep'
+param resourceBaseName string = 'ada-bicep'
 
 targetScope = 'subscription'
 
