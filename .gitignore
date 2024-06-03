@@ -1,0 +1,24 @@
+# Ignore Bicep specific files
+*.exe  # Ignores any .exe files, including bicep.exe
+*.ps1  # Ignores any PowerShell scripts
+*.sh   # Ignores any shell scripts
+
+# Ignore common build artifacts
+**/bin/
+**/obj/
+
+# Ignore generated deployment outputs
+**/deployment.json
+**/deploymentOutputs.json
+
+# Ignore VS Code specific files
+.vscode/
+
+# Ignore test results
+**/test_results/
+
+# Miscellaneous temporary files
+*.tmp
+*.user
+*.suo
+*.sln.docstates
