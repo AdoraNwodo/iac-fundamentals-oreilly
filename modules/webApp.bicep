@@ -57,9 +57,6 @@ resource appServiceApp 'Microsoft.Web/sites@2021-01-15' = {
   identity: {
     type: identityType
   }
-  dependsOn: [
-    appServicePlan
-  ]
 }
 
 @description('The default host name of the App Service app.')
